@@ -98,7 +98,7 @@
 	</div>
 </div>
 
-<div class="w-fit mx-auto mt-32 md:mt-40 mb-32 px-6 sm:px-12">
+<div class="w-fit mx-auto mt-32 md:mt-40 mb-40 px-6 sm:px-12">
 	<div class="flex flex-col items-center">
 		<p class="inline-block text-3xl font-bold">About Me</p>
 		<p class="pt-10 text-gray-500 text-center leading-8 tracking-wide max-w-4xl">
