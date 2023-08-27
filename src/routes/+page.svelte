@@ -9,14 +9,14 @@
 	</div>
 </div>
 
-<div>
-	<p class="inline-block">直近のプロジェクト</p>
+<div class="w-fit mx-auto mt-40">
+	<div class="inline-block text-3xl font-bold">直近のプロジェクト</div>
 </div>
 
-<div>
-	<p class="inline-block">過去のプロジェクト</p>
+<div class="w-fit mx-auto mt-40">
+	<div class="inline-block text-3xl font-bold">過去のプロジェクト</div>
 </div>
 
-<div>
-	<p class="inline-block">About Me</p>
+<div class="w-fit mx-auto mt-40 mb-32">
+	<div class="inline-block text-3xl font-bold">About Me</div>
 </div>
