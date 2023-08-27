@@ -5,7 +5,10 @@
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
 	import { AppShell } from '@skeletonlabs/skeleton';
+	import { Toast} from '@skeletonlabs/skeleton';
 </script>
+
+<Toast />
 
 <AppShell>
 	<!-- (header) -->
