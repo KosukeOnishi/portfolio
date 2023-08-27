@@ -9,14 +9,21 @@
 	</div>
 </div>
 
-<div class="w-fit mx-auto mt-40">
-	<div class="inline-block text-3xl font-bold">直近のプロジェクト</div>
+<div class="w-fit mx-auto mt-40 px-6">
+	<div class="flex flex-col items-center">
+		<p class="inline-block text-3xl font-bold">最近のプロジェクト</p>
+	</div>
 </div>
 
-<div class="w-fit mx-auto mt-40">
-	<div class="inline-block text-3xl font-bold">過去のプロジェクト</div>
+<div class="w-fit mx-auto mt-40 px-6">
+	<div class="flex flex-col items-center">
+		<p class="w-fit text-3xl font-bold">過去のプロジェクト</p>
+		<p class="pt-10 pb-16 text-gray-500">以下のプロジェクトは、すべてFlutter製で、実際にリリースされたものです。</p>
+	</div>
 </div>
 
-<div class="w-fit mx-auto mt-40 mb-32">
-	<div class="inline-block text-3xl font-bold">About Me</div>
+<div class="w-fit mx-auto mt-40 mb-32 px-6">
+	<div class="flex flex-col items-center">
+		<p class="inline-block text-3xl font-bold">About Me</p>
+	</div>
 </div>
