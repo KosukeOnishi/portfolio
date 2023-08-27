@@ -147,8 +147,8 @@
 		</p>
 		<div class="flex flex-wrap justify-center">
 			{#each apps as app}
-				<button on:click={() => onTapApp(app)}>
-					<div class="flex flex-col items-center w-1/2 md:w-auto pb-8 md:pb-0 group">
+				<button on:click={() => onTapApp(app)} class="w-1/2 md:w-auto">
+					<div class="flex flex-col items-center pb-8 md:pb-0 group">
 						<div class="w-[120px] h-[120px] mx-0 2xl:mx-[106px] xl:mx-[90px] lg:mx-[58px] md:mx-7">
 							<img
 								src={app.path}
