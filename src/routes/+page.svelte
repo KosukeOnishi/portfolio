@@ -1,5 +1,5 @@
 <div class="h-screen w-full bg-primary-500 flex items-center">
-	<div class="w-full flex flex-col-reverse sm:flex-row  items-center ">
+	<div class="w-full flex flex-col-reverse sm:flex-row items-center">
 		<div class="w-fit text-center mx-auto text-white selection:bg-secondary-500">
 			<p class="font-medium text-4xl tracking-wide -translate-x-3">Kosuke Onishi</p>
 			<p class="pt-6 text-xl w-fit leading-8 tracking-widest font-light">+22 years old</p>
@@ -9,14 +9,52 @@
 			</p>
 		</div>
 		<div class="mx-auto">
-			<img src="/cup.svg" alt="a coffee cup with flutter logo inside" class="-translate-y-8 pb-4 sm:pb-0"/>
+			<img
+				src="/cup.svg"
+				alt="a coffee cup with flutter logo inside"
+				class="-translate-y-8 pb-4 sm:pb-0"
+			/>
 		</div>
 	</div>
 </div>
 
-<div class="w-fit mx-auto mt-40 px-6">
+<div class="mx-auto mt-40 px-6">
 	<div class="flex flex-col items-center">
-		<p class="inline-block text-3xl font-bold">最近のプロジェクト</p>
+		<p class="inline-block text-3xl font-bold pb-20">最近のプロジェクト</p>
+		<div class="flex flex-col lg:flex-row max-w-6xl justify-between items-center lg:items-start">
+			<div class="mr-0 lg:mr-10 xl:w-[524px] xl:max-w-[524px] max-w-[450px]">
+				<img
+					src="/specialico.png"
+					alt="feature graphic of the app called specialico"
+					class="rounded-lg object-contain"
+				/>
+			</div>
+			<div
+				class="ml-0 lg:ml-10 flex flex-col items-center lg:items-start xl:w-[524px] lg:w-[450px]"
+			>
+				<p class="font-bold text-2xl mt-10 lg:mt-0">Specialico</p>
+				<p class="tracking-wide leading-8 mt-4 text-center lg:text-start px-0 md:px-10 lg:px-0">
+					スペシャルティコーヒーが飲めるコーヒーショップを探せるアプリ。Flutter、Firebase、Google
+					Admob、Maps SDKなどを使用。
+				</p>
+				<p class="text-gray-500 text-sm">→詳しく見る</p>
+				<div class="flex mt-4">
+					<a
+						href="https://apps.apple.com/jp/app/specialico/id6462790050"
+						target="_blank"
+						rel="noopener noreferrer"
+						><img src="/app_store.svg" alt="app store button" class= "object-contain h-10" />
+					</a>
+					<a
+						href="https://play.google.com/store/apps/details?id=com.specialico"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="ml-4"
+						><img src="/play_store.png" alt="app store button" class="object-contain h-10"/>
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
