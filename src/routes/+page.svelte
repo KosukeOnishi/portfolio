@@ -55,24 +55,42 @@
 <div class="mx-auto mt-40 px-6">
 	<div class="flex flex-col items-center">
 		<p class="inline-block text-3xl font-bold pb-20">最近のプロジェクト</p>
-		<div class="flex flex-col lg:flex-row max-w-6xl justify-between items-center lg:items-start">
-			<div class="mr-0 lg:mr-10 xl:w-[524px] xl:max-w-[524px] max-w-[450px]">
-				<img
-					src="/specialico.png"
-					alt="feature graphic of the app called specialico"
-					class="rounded-lg object-contain"
-				/>
-			</div>
+		<div
+			class="group flex flex-col lg:flex-row max-w-6xl justify-between items-center lg:items-start"
+		>
+			<a href="">
+				<div class="mr-0 lg:mr-10 xl:w-[524px] xl:max-w-[524px] max-w-[450px] relative">
+					<img
+						src="/specialico.png"
+						alt="feature graphic of the app called specialico"
+						class="rounded-lg object-contain"
+					/>
+					<div
+						class="absolute top-0 opacity-0 bg-white h-full w-full rounded-lg group-hover:opacity-30"
+					/>
+				</div>
+			</a>
 			<div
 				class="ml-0 lg:ml-10 flex flex-col items-center lg:items-start xl:w-[524px] lg:w-[450px] translate-y-0 lg:-translate-y-1"
 			>
-				<p class="font-bold text-2xl mt-10 lg:mt-0">Specialico</p>
-				<p class="tracking-wide leading-8 mt-4 text-center lg:text-start px-0 md:px-10 lg:px-0">
-					スペシャルティコーヒーが飲めるコーヒーショップを探せるアプリ。Flutter、Firebase、Google
-					Admob、Maps SDKなどを使用。
-				</p>
-				<p class="text-gray-500 text-sm">→詳しく見る</p>
-				<div class="flex lg:mt-4 mt-8">
+				<a href="">
+					<p class="font-bold text-2xl mt-10 lg:mt-0 group-hover:opacity-75">Specialico</p>
+				</a>
+				<a href="">
+					<p
+						class="tracking-wide leading-8 mt-4 text-center lg:text-start px-0 md:px-10 lg:px-0 group-hover:opacity-75"
+					/></a
+				>
+				<a href="">
+					<p>
+						スペシャルティコーヒーが飲めるコーヒーショップを探せるアプリ。Flutter、Firebase、Google
+						Admob、Maps SDKなどを使用。
+					</p>
+				</a>
+				<a href="">
+					<p class="text-gray-500 text-sm group-hover:opacity-75">→詳しく見る</p>
+				</a>
+				<div class="flex lg:mt-4 mt-8 group/buttons">
 					<a
 						href="https://apps.apple.com/jp/app/specialico/id6462790050"
 						target="_blank"
@@ -126,7 +144,9 @@
 		</p>
 		<div class="flex pt-3 text-gray-500 text-center leading-8 tracking-wide max-w-4xl">
 			<div>Contact:</div>
-			<button use:clipboard={'kosuke.nsh@gmail.com'} class="ml-2 underline" on:click={onTapEmail}>kosuke.nsh@gmail.com</button>
+			<button use:clipboard={'kosuke.nsh@gmail.com'} class="ml-2 underline" on:click={onTapEmail}
+				>kosuke.nsh@gmail.com</button
+			>
 		</div>
 	</div>
 </div>
