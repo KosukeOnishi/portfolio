@@ -3,8 +3,8 @@
 	import type { ToastSettings } from '@skeletonlabs/skeleton';
 	import { clipboard } from '@skeletonlabs/skeleton';
 	import { modalStore } from '@skeletonlabs/skeleton';
-	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
-	import type { Declaration } from 'postcss';
+	import type { ModalSettings } from '@skeletonlabs/skeleton';
+	import { base } from '$app/paths';
 
 	const specialicoUrl = 'https://github.com/KosukeOnishi/sample_specialico';
 
@@ -23,26 +23,26 @@
 	const apps = [
 		{
 			title: 'ReadHub',
-			path: '/readhub.png',
-			detail_path: '/readhub_detail.png',
+			path: base + '/readhub.png',
+			detail_path: base +'/readhub_detail.png',
 			body: '人から本を探せる読書コミュニティアプリです。当初swiftで開発されていたアプリを、flutterを用いてひとりでAndroidに実装しました。'
 		},
 		{
 			title: 'Phily',
-			path: '/phily.png',
-			detail_path: '/phily_detail.png',
+			path: base + '/phily.png',
+			detail_path: base + '/phily_detail.png',
 			body: 'Z世代向け音声通話アプリです。チーム開発で、主にUIや遊び心のあるアニメーションの実装などを担当しました。'
 		},
 		{
 			title: '異才FUTURE',
-			path: '/isai.png',
-			detail_path: '/isai_detail.png',
+			path: base + '/isai.png',
+			detail_path: base + '/isai_detail.png',
 			body: 'WOWWOWの番組『異彩FUTURE うたえミライの歌』の番組内アプリです。Android版アプリを担当しました。'
 		},
 		{
 			title: 'DailyDo',
-			path: '/dailydo.png',
-			detail_path: '/dailydo_detail.png',
+			path: base + '/dailydo.png',
+			detail_path: base + '/dailydo_detail.png',
 			body: '日単位でタスク管理する、というコンセプトのToDoアプリです。個人開発でつくり、Google Play Storeでリリースしました。SNSへのシェア機能や、多言語対応などを実装しました。'
 		}
 	];
@@ -73,7 +73,7 @@
 		</div>
 		<div class="mx-auto">
 			<img
-				src="/cup.svg"
+				src="{base}/cup.svg"
 				alt="a coffee cup with flutter logo inside"
 				class="-translate-y-8 pb-4 sm:pb-0"
 			/>
@@ -90,7 +90,7 @@
 			<a href={specialicoUrl} target="_blank" rel="noopener noreferrer">
 				<div class="mr-0 lg:mr-10 xl:w-[524px] xl:max-w-[524px] max-w-[450px] relative">
 					<img
-						src="/specialico.png"
+						src="{base}/specialico.png"
 						alt="feature graphic of the app called specialico"
 						class="rounded-lg object-contain"
 					/>
@@ -124,14 +124,14 @@
 						href="https://apps.apple.com/jp/app/specialico/id6462790050"
 						target="_blank"
 						rel="noopener noreferrer"
-						><img src="/app_store.svg" alt="app store button" class="object-contain h-11" />
+						><img src="{base}/app_store.svg" alt="app store button" class="object-contain h-11" />
 					</a>
 					<a
 						href="https://play.google.com/store/apps/details?id=com.specialico"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="ml-4"
-						><img src="/play_store.png" alt="app store button" class="object-contain h-11" />
+						><img src="{base}/play_store.png" alt="app store button" class="object-contain h-11" />
 					</a>
 				</div>
 			</div>
@@ -151,7 +151,7 @@
 					<div class="flex flex-col items-center pb-8 md:pb-0 group">
 						<div class="w-[120px] h-[120px] mx-0 2xl:mx-[106px] xl:mx-[90px] lg:mx-[58px] md:mx-7">
 							<img
-								src={app.path}
+								src='{app.path}'
 								alt="app icon of the app called {app.title}"
 								class="rounded-3xl object-contain group-hover:opacity-75"
 							/>
