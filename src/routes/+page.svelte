@@ -1,3 +1,24 @@
+<script>
+	const apps = [
+		{
+			title: 'ReadHub',
+			path: '/readhub.png'
+		},
+		{
+			title: 'Phily',
+			path: '/phily.png'
+		},
+		{
+			title: 'isai',
+			path: '/isai.png'
+		},
+		{
+			title: 'DailyDo',
+			path: '/dailydo.png'
+		}
+	];
+</script>
+
 <div class="h-screen w-full bg-primary-500 flex items-center">
 	<div class="w-full flex flex-col-reverse sm:flex-row items-center">
 		<div class="w-fit text-center mx-auto text-white selection:bg-secondary-500">
@@ -38,19 +59,19 @@
 					Admob、Maps SDKなどを使用。
 				</p>
 				<p class="text-gray-500 text-sm">→詳しく見る</p>
-				<div class="flex mt-4">
+				<div class="flex lg:mt-4 mt-8">
 					<a
 						href="https://apps.apple.com/jp/app/specialico/id6462790050"
 						target="_blank"
 						rel="noopener noreferrer"
-						><img src="/app_store.svg" alt="app store button" class= "object-contain h-10" />
+						><img src="/app_store.svg" alt="app store button" class="object-contain h-10" />
 					</a>
 					<a
 						href="https://play.google.com/store/apps/details?id=com.specialico"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="ml-4"
-						><img src="/play_store.png" alt="app store button" class="object-contain h-10"/>
+						><img src="/play_store.png" alt="app store button" class="object-contain h-10" />
 					</a>
 				</div>
 			</div>
@@ -64,10 +85,20 @@
 		<p class="pt-10 pb-16 text-gray-500 tracking-wide max-w-4xl">
 			以下のプロジェクトは、すべてFlutter製で、実際にリリースされたものです。
 		</p>
+		<div class="flex flex-wrap justify-center">
+			{#each apps as app}
+				<div class="flex flex-col items-center w-1/2 md:w-auto pb-8 md:pb-0">
+					<div class="w-[120px] h-[120px] mx-0 2xl:mx-[106px] xl:mx-[90px] lg:mx-[58px] md:mx-7">
+						<img src={app.path} alt="app icon of the app called {app.title}" class="rounded-3xl object-contain" />
+					</div>
+					<p class="pt-4 text-xl font-bold">{app.title}</p>
+				</div>
+			{/each}
+		</div>
 	</div>
 </div>
 
-<div class="w-fit mx-auto mt-40 mb-32 px-6 sm:px-12">
+<div class="w-fit mx-auto mt-32 md:mt-40 mb-32 px-6 sm:px-12">
 	<div class="flex flex-col items-center">
 		<p class="inline-block text-3xl font-bold">About Me</p>
 		<p class="pt-10 text-gray-500 text-center leading-8 tracking-wide max-w-4xl">
