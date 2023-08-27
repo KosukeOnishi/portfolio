@@ -5,9 +5,11 @@
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
 	import { AppShell } from '@skeletonlabs/skeleton';
-	import { Toast} from '@skeletonlabs/skeleton';
+	import { Toast } from '@skeletonlabs/skeleton';
+	import { Modal } from '@skeletonlabs/skeleton';
 </script>
 
+<Modal buttonTextCancel="閉じる" flyY={0} padding='p-8'/>
 <Toast />
 
 <AppShell>

@@ -1,34 +1,63 @@
 <script lang="ts">
-	import { Toast, toastStore } from '@skeletonlabs/skeleton';
+	import { toastStore } from '@skeletonlabs/skeleton';
 	import type { ToastSettings } from '@skeletonlabs/skeleton';
 	import { clipboard } from '@skeletonlabs/skeleton';
+	import { modalStore } from '@skeletonlabs/skeleton';
+	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
+	import type { Declaration } from 'postcss';
+
+	const specialicoUrl = 'https://github.com/KosukeOnishi/sample_specialico';
 
 	const t: ToastSettings = {
 		message: 'メールアドレスをコピーしました',
 		timeout: 2000
 	};
 
+	const modal: ModalSettings = {
+		type: 'alert',
+		title: 'Example Alert',
+		body: 'This is an example modal.',
+		image: 'https://i.imgur.com/WOgTG96.gif'
+	};
+
 	const apps = [
 		{
 			title: 'ReadHub',
-			path: '/readhub.png'
+			path: '/readhub.png',
+			detail_path: '/readhub_detail.png',
+			body: '人から本を探せる読書コミュニティアプリです。当初swiftで開発されていたアプリを、flutterを用いてひとりでAndroidに実装しました。'
 		},
 		{
 			title: 'Phily',
-			path: '/phily.png'
+			path: '/phily.png',
+			detail_path: '/phily_detail.png',
+			body: 'Z世代向け音声通話アプリです。チーム開発で、主にUIや遊び心のあるアニメーションの実装などを担当しました。'
 		},
 		{
-			title: 'isai',
-			path: '/isai.png'
+			title: '異才FUTURE',
+			path: '/isai.png',
+			detail_path: '/isai_detail.png',
+			body: 'WOWWOWの番組『異彩FUTURE うたえミライの歌』の番組内アプリです。Android版アプリを担当しました。'
 		},
 		{
 			title: 'DailyDo',
-			path: '/dailydo.png'
+			path: '/dailydo.png',
+			detail_path: '/dailydo_detail.png',
+			body: '日単位でタスク管理する、というコンセプトのToDoアプリです。個人開発でつくり、Google Play Storeでリリースしました。SNSへのシェア機能や、多言語対応などを実装しました。'
 		}
 	];
 
 	function onTapEmail() {
 		toastStore.trigger(t);
+	}
+
+	function onTapApp(app: { title: string; path: string; detail_path: string; body: string }) {
+		modalStore.trigger({
+			type: 'alert',
+			title: app.title,
+			body: app.body,
+			image: app.detail_path
+		});
 	}
 </script>
 
@@ -58,7 +87,7 @@
 		<div
 			class="group flex flex-col lg:flex-row max-w-6xl justify-between items-center lg:items-start"
 		>
-			<a href="">
+			<a href={specialicoUrl} target="_blank" rel="noopener noreferrer">
 				<div class="mr-0 lg:mr-10 xl:w-[524px] xl:max-w-[524px] max-w-[450px] relative">
 					<img
 						src="/specialico.png"
@@ -73,21 +102,21 @@
 			<div
 				class="ml-0 lg:ml-10 flex flex-col items-center lg:items-start xl:w-[524px] lg:w-[450px] translate-y-0 lg:-translate-y-1"
 			>
-				<a href="">
+				<a href={specialicoUrl} target="_blank" rel="noopener noreferrer">
 					<p class="font-bold text-2xl mt-10 lg:mt-0 group-hover:opacity-75">Specialico</p>
 				</a>
-				<a href="">
+				<a href={specialicoUrl} target="_blank" rel="noopener noreferrer">
 					<p
 						class="tracking-wide leading-8 mt-4 text-center lg:text-start px-0 md:px-10 lg:px-0 group-hover:opacity-75"
 					/></a
 				>
-				<a href="">
-					<p>
+				<a href={specialicoUrl} target="_blank" rel="noopener noreferrer">
+					<p class="group-hover:opacity-75">
 						スペシャルティコーヒーが飲めるコーヒーショップを探せるアプリ。Flutter、Firebase、Google
 						Admob、Maps SDKなどを使用。
 					</p>
 				</a>
-				<a href="">
+				<a href={specialicoUrl} target="_blank" rel="noopener noreferrer">
 					<p class="text-gray-500 text-sm group-hover:opacity-75">→詳しく見る</p>
 				</a>
 				<div class="flex lg:mt-4 mt-8 group/buttons">
@@ -118,16 +147,18 @@
 		</p>
 		<div class="flex flex-wrap justify-center">
 			{#each apps as app}
-				<div class="flex flex-col items-center w-1/2 md:w-auto pb-8 md:pb-0">
-					<div class="w-[120px] h-[120px] mx-0 2xl:mx-[106px] xl:mx-[90px] lg:mx-[58px] md:mx-7">
-						<img
-							src={app.path}
-							alt="app icon of the app called {app.title}"
-							class="rounded-3xl object-contain"
-						/>
+				<button on:click={() => onTapApp(app)}>
+					<div class="flex flex-col items-center w-1/2 md:w-auto pb-8 md:pb-0 group">
+						<div class="w-[120px] h-[120px] mx-0 2xl:mx-[106px] xl:mx-[90px] lg:mx-[58px] md:mx-7">
+							<img
+								src={app.path}
+								alt="app icon of the app called {app.title}"
+								class="rounded-3xl object-contain group-hover:opacity-75"
+							/>
+						</div>
+						<p class="pt-4 text-xl font-bold group-hover:opacity-75">{app.title}</p>
 					</div>
-					<p class="pt-4 text-xl font-bold">{app.title}</p>
-				</div>
+				</button>
 			{/each}
 		</div>
 	</div>
