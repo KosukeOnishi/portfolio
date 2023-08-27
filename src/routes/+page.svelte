@@ -19,7 +19,7 @@
 	];
 </script>
 
-<div class="h-screen w-full bg-primary-500 flex items-center">
+<div class="h-screen w-full bg-primary-500 flex items-center bg-[url('/noise.svg')]">
 	<div class="w-full flex flex-col-reverse sm:flex-row items-center">
 		<div class="w-fit text-center mx-auto text-white selection:bg-secondary-500">
 			<p class="font-medium text-4xl tracking-wide -translate-x-3">Kosuke Onishi</p>
@@ -51,7 +51,7 @@
 				/>
 			</div>
 			<div
-				class="ml-0 lg:ml-10 flex flex-col items-center lg:items-start xl:w-[524px] lg:w-[450px]"
+				class="ml-0 lg:ml-10 flex flex-col items-center lg:items-start xl:w-[524px] lg:w-[450px] translate-y-0 lg:-translate-y-1"
 			>
 				<p class="font-bold text-2xl mt-10 lg:mt-0">Specialico</p>
 				<p class="tracking-wide leading-8 mt-4 text-center lg:text-start px-0 md:px-10 lg:px-0">
@@ -64,14 +64,14 @@
 						href="https://apps.apple.com/jp/app/specialico/id6462790050"
 						target="_blank"
 						rel="noopener noreferrer"
-						><img src="/app_store.svg" alt="app store button" class="object-contain h-10" />
+						><img src="/app_store.svg" alt="app store button" class="object-contain h-11" />
 					</a>
 					<a
 						href="https://play.google.com/store/apps/details?id=com.specialico"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="ml-4"
-						><img src="/play_store.png" alt="app store button" class="object-contain h-10" />
+						><img src="/play_store.png" alt="app store button" class="object-contain h-11" />
 					</a>
 				</div>
 			</div>
