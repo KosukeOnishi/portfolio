@@ -16,7 +16,7 @@
 	<!-- (header) -->
 	<slot />
 	<svelte:fragment slot="pageFooter">
-		<div class="bg-white py-6 px-16 w-full flex justify-between">
+		<div class="bg-white py-6 px-4 sm:px-16 w-full flex justify-between">
 			<span>© Kosuke Onishi</span>
 			<div class="flex">
 				<a href="https://github.com/KosukeOnishi" target="_blank" rel="noopener noreferrer"

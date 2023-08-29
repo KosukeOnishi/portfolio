@@ -75,7 +75,7 @@
 			<img
 				src="{base}/cup.svg"
 				alt="a coffee cup with flutter logo inside"
-				class="-translate-y-8 pb-4 sm:pb-0"
+				class="-translate-y-8 translate-x-2 sm:translate-x-0 pb-4 sm:pb-0"
 			/>
 		</div>
 	</div>
@@ -83,7 +83,7 @@
 
 <div class="mx-auto mt-40 px-6">
 	<div class="flex flex-col items-center">
-		<p class="inline-block text-3xl font-bold pb-20">最近のプロジェクト</p>
+		<p class="inline-block text-3xl font-semibold pb-20">最近のプロジェクト</p>
 		<div
 			class="group flex flex-col lg:flex-row max-w-6xl justify-between items-center lg:items-start"
 		>
@@ -103,7 +103,7 @@
 				class="ml-0 lg:ml-10 flex flex-col items-center lg:items-start xl:w-[524px] lg:w-[450px] translate-y-0 lg:-translate-y-1"
 			>
 				<a href={specialicoUrl} target="_blank" rel="noopener noreferrer">
-					<p class="font-bold text-2xl mt-10 lg:mt-0 group-hover:opacity-75">Specialico</p>
+					<p class="font-semibold text-2xl mt-10 lg:mt-0 group-hover:opacity-75">Specialico</p>
 				</a>
 				<a href={specialicoUrl} target="_blank" rel="noopener noreferrer">
 					<p
@@ -111,7 +111,7 @@
 					/></a
 				>
 				<a href={specialicoUrl} target="_blank" rel="noopener noreferrer">
-					<p class="group-hover:opacity-75">
+					<p class="group-hover:opacity-75 text-center lg:text-start">
 						スペシャルティコーヒーが飲めるコーヒーショップを探せるアプリ。Flutter、Firebase、Google
 						Admob、Maps SDKなどを使用。
 					</p>
@@ -141,8 +141,8 @@
 
 <div class="w-fit mx-auto mt-40 px-6">
 	<div class="flex flex-col items-center">
-		<p class="w-fit text-3xl font-bold">過去のプロジェクト</p>
-		<p class="pt-10 pb-16 text-gray-500 tracking-wide max-w-4xl">
+		<p class="w-fit text-3xl font-semibold">過去のプロジェクト</p>
+		<p class="pt-10 pb-16 text-gray-500 tracking-wide max-w-4xl text-center">
 			以下のプロジェクトは、すべてFlutter製で実際にリリースされたものです。
 		</p>
 		<div class="flex flex-wrap justify-center">
@@ -156,7 +156,7 @@
 								class="rounded-3xl object-contain group-hover:opacity-75"
 							/>
 						</div>
-						<p class="pt-4 text-xl font-bold group-hover:opacity-75">{app.title}</p>
+						<p class="pt-4 text-xl font-semibold group-hover:opacity-75">{app.title}</p>
 					</div>
 				</button>
 			{/each}
@@ -166,7 +166,7 @@
 
 <div class="w-fit mx-auto mt-32 md:mt-40 mb-40 px-6 sm:px-12">
 	<div class="flex flex-col items-center">
-		<p class="inline-block text-3xl font-bold">About Me</p>
+		<p class="inline-block text-3xl font-semibold">About Me</p>
 		<p class="pt-10 text-gray-500 text-center leading-8 tracking-wide max-w-4xl">
 			SFC在学中に、先輩の起業したスタートアップに誘われてFlutter開発をスタート。2つのアプリのリリース、サービスの指標設計・管理に携わりました。その会社を辞めたのち、いくつかのアプリを個人で開発しました。
 		</p>
